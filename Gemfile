@@ -1,61 +1,52 @@
 source "https://rubygems.org"
 
-# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+# Core Rails Gems
 gem "rails", "~> 7.2.1"
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
-# Use sqlite3 as the database for Active Record
-gem "sqlite3", ">= 1.4"
-# Use the Puma web server [https://github.com/puma/puma]
-gem "puma", ">= 5.0"
-# Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
-gem "jsbundling-rails"
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails"
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem "stimulus-rails"
-# Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
-# Use Redis adapter to run Action Cable in production
-# gem "redis", ">= 4.0.1"
+gem "sprockets-rails" # Asset pipeline for Rails
+gem "sqlite3", ">= 1.4" # Default database for ActiveRecord
+gem "puma", ">= 5.0" # Web server for Rails
 
-# Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
-# gem "kredis"
+# JavaScript and Front-End Frameworks
+gem "jsbundling-rails" # Bundle and transpile JavaScript
+gem "turbo-rails" # Hotwire SPA-like accelerator
+gem "stimulus-rails" # Hotwire's JavaScript framework
 
-# Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
+# JSON APIs
+gem "jbuilder" # Build JSON APIs easily
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ windows jruby ]
+# Authentication
+gem "devise", "~> 4.9" # User authentication
 
-# Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", require: false
-
-# Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
-
+# Test and Development Tools
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
-
-  # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
-  gem "brakeman", require: false
-
-  # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
-  gem "rubocop-rails-omakase", require: false
+  gem "debug", platforms: %i[mri windows], require: "debug/prelude" # Debugging tools
+  gem "rspec-rails", "~> 7.0" # RSpec testing framework
+  gem "factory_bot_rails", "~> 6.4" # Fixtures replacement
+  gem "faker", "~> 3.4" # Generate fake data for tests
+  gem "pry-rails", "~> 0.3.11" # Enhanced REPL for Rails console
+  gem "brakeman", require: false # Security scanner for Rails applications
+  gem "rubocop-rails-omakase", require: false # Ruby/Rails code style guide
 end
 
 group :development do
-  # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem "web-console"
+  gem "web-console" # Rails console on error pages
 end
 
 group :test do
-  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
-  gem "selenium-webdriver"
+  gem "capybara" # System testing with Capybara
+  gem "selenium-webdriver" # Browser automation for system tests
 end
 
-gem "view_component", "~> 3.17"
+# Additional Production Tools
+# gem "redis", ">= 4.0.1" # Redis adapter for Action Cable in production
+# gem "kredis" # Higher-level data types in Redis
+# gem "image_processing", "~> 1.2" # ActiveStorage variants for image processing
 
-gem "devise", "~> 4.9"
+# View Components
+gem "view_component", "~> 3.17" # Build reusable view components
+
+# Platform-Specific Gems
+gem "tzinfo-data", platforms: %i[windows jruby] # Timezone info for Windows and JRuby platforms
+
+# Performance Optimization
+gem "bootsnap", require: false # Speeds up boot times by caching expensive operations
