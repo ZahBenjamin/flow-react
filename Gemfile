@@ -43,7 +43,7 @@ end
 # gem "image_processing", "~> 1.2" # ActiveStorage variants for image processing
 
 # View Components
-gem "view_component", "~> 3.17" # Build reusable view components
+gem "view_component", "~> 3.18" # Build reusable view components
 
 # Platform-Specific Gems
 gem "tzinfo-data", platforms: %i[windows jruby] # Timezone info for Windows and JRuby platforms
