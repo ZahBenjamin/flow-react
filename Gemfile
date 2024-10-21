@@ -22,7 +22,7 @@ group :development, :test do
   gem "debug", platforms: %i[mri windows], require: "debug/prelude" # Debugging tools
   gem "rspec-rails", "~> 7.0" # RSpec testing framework
   gem "factory_bot_rails", "~> 6.4" # Fixtures replacement
-  gem "faker", "~> 3.4" # Generate fake data for tests
+  gem "faker", "~> 3.5" # Generate fake data for tests
   gem "pry-rails", "~> 0.3.11" # Enhanced REPL for Rails console
   gem "brakeman", require: false # Security scanner for Rails applications
   gem "rubocop-rails-omakase", require: false # Ruby/Rails code style guide
