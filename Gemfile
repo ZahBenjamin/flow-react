@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Core Rails Gems
-gem "rails", "~> 7.2.1"
+gem "rails", "~> 8.0.1"
 gem "sprockets-rails" # Asset pipeline for Rails
 gem "sqlite3", ">= 1.4" # Default database for ActiveRecord
 gem "puma", ">= 5.0" # Web server for Rails
